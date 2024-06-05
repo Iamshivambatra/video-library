@@ -55,8 +55,9 @@ const App = () => {
                 ))}
             </div>
             <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
+            <button onClick={() => setIsModalOpen(false)}>Close</button>
                 {currentVideo && <video controls src={URL.createObjectURL(currentVideo)} style={{ width: '100%' }} />}
-                <button onClick={() => setIsModalOpen(false)}>Close</button>
+               
             </Modal>
         </div>
     );
